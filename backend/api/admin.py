@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .views import Project, Work, Education
 
-# Register your models here.
+admin.site.register(Project)
+admin.site.register(Work)
+admin.site.register(Education)

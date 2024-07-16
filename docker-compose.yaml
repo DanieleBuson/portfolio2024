@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  backend:
+    volumes:
+      - type: volume
+        source: static
+        target: /static
+    env_file:
+      - .env
+    build:
+      context: ./backend
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: ./frontend
+    volumes:
+      - type: volume
+        source: frontend
+        target: /app/build
+
+  nginx:
+    build:
+      context: ./nginx
+    volumes:
+      - type: volume
+        source: static
+        target: /static
+      - type: volume
+        source: frontend
+        target: /var/www/frontend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - backend
+      - frontend
+
+volumes:
+  static:
+  frontend:

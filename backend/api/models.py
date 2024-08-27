@@ -5,6 +5,7 @@ class Project(models.Model):
     description = models.TextField()
     image = models.ImageField(upload_to='projects/')
     order = models.IntegerField(default=0)
+    link = models.CharField(max_length=1000, blank=True, null=True)
 
 class Work(models.Model):
     title = models.CharField(max_length=200)

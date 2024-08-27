@@ -151,3 +151,53 @@
     padding: 60px 50px;
     margin-top: -60px;
   }
+
+/* Media Query for screens smaller than 768px */
+@media (max-width: 768px) {
+  .experiences h2 {
+    font-size: 35px;
+  }
+
+  .experiences p {
+    font-size: 16px;
+    width: 70%;
+  }
+
+  .experiences .nav.nav-pills .nav-link {
+    font-size: 15px;
+    padding: 15px 0;
+  }
+
+  .proj-txtx h4 {
+    font-size: 25px;
+  }
+
+  .proj-txtx span {
+    font-size: 13px;
+  }
+}
+
+/* Media Query for screens smaller than 480px */
+@media (max-width: 480px) {
+  .experiences h2 {
+    font-size: 28px;
+  }
+
+  .experiences p {
+    font-size: 14px;
+    width: 90%;
+  }
+
+  .experiences .nav.nav-pills .nav-link {
+    font-size: 14px;
+    padding: 12px 0;
+  }
+
+  .proj-txtx h4 {
+    font-size: 20px;
+  }
+
+  .proj-txtx span {
+    font-size: 12px;
+  }
+}
